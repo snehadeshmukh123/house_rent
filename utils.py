@@ -2,7 +2,7 @@ import pickle
 import json
 import numpy as np
 import config
-model_file_name= config.MODEL_FILE_PATH
+
 
 
 class HouseRent():
@@ -11,7 +11,7 @@ class HouseRent():
       
 
    def __load_saved_data(self):
-       with open(config.MODEL_FILE_PATH,'rb') as f:
+       with open('linear_regression.pkl','rb') as f:
             self.model = pickle.load(f)
 
    def get_predicted_price(self):
